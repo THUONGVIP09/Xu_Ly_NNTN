@@ -3,7 +3,8 @@ import nltk
 from nltk.corpus import stopwords, wordnet
 from nltk.tokenize import word_tokenize
 
-
+#import nltk
+#nltk.download('all')
  #lọc từ 
 
 text=" This is a sample sentence showing stopword removal."
