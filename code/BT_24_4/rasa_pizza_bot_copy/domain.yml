@@ -1,0 +1,52 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - order_pizza
+  - inform
+  - affirm
+  - deny
+
+entities:
+  - pizza_size
+  - pizza_topping
+
+slots:
+  pizza_size:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: pizza_size
+
+  pizza_topping:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: pizza_topping
+
+responses:
+  utter_greet:
+  - text: "Hi! I am PizzaBot. What pizza would you like?"
+
+  utter_ask_size:
+  - text: "What size pizza would you like? small, medium, or large?"
+
+  utter_ask_topping:
+  - text: "What toppings would you like?"
+
+  utter_confirm_order:
+  - text: "Great! I have your {pizza_size} pizza with {pizza_topping}. Your order is noted."
+
+  utter_goodbye:
+  - text: "Goodbye!"
+  utter_iamabot:
+  - text: "Tôi là bot đặt pizza."
+
+actions:
+  - utter_greet
+  - utter_ask_size
+  - utter_ask_topping
+  - utter_confirm_order
+  - utter_goodbye
+  - utter_iamabot

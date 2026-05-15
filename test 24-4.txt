@@ -1,0 +1,22 @@
+cd /d "D:\HK6\Xử Lý NNTN\code\BT_24_4\rasa_pizza_bot"
+
+python -m rasa data validate
+rmdir /s /q models
+python -m rasa train --force
+python -m rasa shell
+
+
+
+conda activate rasa_env
+cd /d "D:\HK6\doancn1\rasa_report_bot"
+rasa run actions
+
+
+
+cd /d "D:\HK6\doancn1\backend"
+uvicorn main:app --reload --port 8000
+
+
+conda activate rasa_env
+cd /d "D:\HK6\doancn1\rasa_report_bot"
+rasa run --enable-api --cors "*" --port 5005

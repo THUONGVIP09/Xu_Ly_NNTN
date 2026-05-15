@@ -1,0 +1,53 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+
+- intent: order_pizza
+  examples: |
+    - I want to order a pizza
+    - I want a pizza
+    - order pizza
+    - can I get a pizza
+    - I would like a [medium](pizza_size) pizza
+    - give me a [large](pizza_size) pizza
+    - I want a [small](pizza_size) pizza with [cheese](pizza_topping)
+    - I want a [medium](pizza_size) pizza with [pepperoni](pizza_topping)
+    - give me a pizza with [mushroom](pizza_topping)
+    - [large](pizza_size) pizza with [cheese](pizza_topping) and [onion](pizza_topping)
+
+- intent: inform
+  examples: |
+    - [small](pizza_size)
+    - [medium](pizza_size)
+    - [large](pizza_size)
+    - [cheese](pizza_topping)
+    - [pepperoni](pizza_topping)
+    - [mushroom](pizza_topping)
+    - [onion](pizza_topping)
+    - with [cheese](pizza_topping)
+    - with [pepperoni](pizza_topping)
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - correct
+    - that's right
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really

@@ -1,0 +1,80 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - xin chào
+      - chào bạn
+      - hello
+      - hi
+      - chào bot
+      - alo
+
+  - intent: book_ride
+    examples: |
+      - tôi muốn đặt xe
+      - đặt xe giúp tôi
+      - tôi cần gọi xe
+      - tôi muốn gọi xe
+      - đặt xe cho tôi
+      - tôi cần đặt một chuyến xe
+      - đặt xe từ [Sơn Trà](from_location) đến [VKU](to_location)
+      - đi từ [bến xe](from_location) đến [sân bay](to_location)
+      - tôi muốn đi từ [Đà Nẵng](from_location) đến [Hội An](to_location)
+      - gọi [xe máy](vehicle_type) từ [Sơn Trà](from_location) đến [VKU](to_location)
+      - đặt [ô tô](vehicle_type) từ [bến xe](from_location) đến [sân bay](to_location)
+      - đặt [4 chỗ](vehicle_type) đi từ [Ngũ Hành Sơn](from_location) đến [Hải Châu](to_location)
+      - tôi muốn đặt [7 chỗ](vehicle_type) từ [Liên Chiểu](from_location) đến [sân bay](to_location)
+
+  - intent: inform
+    examples: |
+      - [Sơn Trà](from_location)
+      - tôi đi từ [Sơn Trà](from_location)
+      - điểm đi là [Sơn Trà](from_location)
+      - đón tôi ở [bến xe](from_location)
+      - tôi đang ở [Đà Nẵng](from_location)
+      - từ [Ngũ Hành Sơn](from_location)
+      - từ [Liên Chiểu](from_location)
+      - đến [VKU](to_location)
+      - tôi muốn đến [sân bay](to_location)
+      - điểm đến là [Hội An](to_location)
+      - cho tôi đến [Hải Châu](to_location)
+      - tôi đi đến [bến xe](to_location)
+      - [xe máy](vehicle_type)
+      - cho tôi [xe máy](vehicle_type)
+      - tôi muốn đi [ô tô](vehicle_type)
+      - chọn [4 chỗ](vehicle_type)
+      - cho tôi xe [4 chỗ](vehicle_type)
+      - tôi muốn đi xe [7 chỗ](vehicle_type)
+      - chọn xe [7 chỗ](vehicle_type)
+      - [motorbike](vehicle_type)
+      - [car](vehicle_type)
+
+  - intent: confirm
+    examples: |
+      - đúng rồi
+      - ok
+      - oke
+      - chính xác
+      - xác nhận
+      - đồng ý
+      - đúng
+      - được rồi
+
+  - intent: cancel
+    examples: |
+      - hủy
+      - không cần nữa
+      - thôi
+      - hủy chuyến
+      - tôi không đặt nữa
+      - bỏ qua
+      - không đi nữa
+
+  - synonym: xe máy
+    examples: |
+      - motorbike
+
+  - synonym: ô tô
+    examples: |
+      - car

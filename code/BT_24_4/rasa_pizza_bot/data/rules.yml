@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+  - rule: Say hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Cancel booking
+    steps:
+      - intent: cancel
+      - action: utter_cancel
+
+  - rule: Confirm booking
+    steps:
+      - intent: confirm
+      - action: utter_booking_success

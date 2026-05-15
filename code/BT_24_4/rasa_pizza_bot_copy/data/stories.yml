@@ -1,0 +1,23 @@
+version: "3.1"
+
+stories:
+- story: simple pizza order full info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza
+  - action: utter_confirm_order
+
+- story: pizza order ask missing size and topping
+  steps:
+  - intent: order_pizza
+  - action: utter_ask_size
+  - intent: inform
+  - action: utter_ask_topping
+  - intent: inform
+  - action: utter_confirm_order
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

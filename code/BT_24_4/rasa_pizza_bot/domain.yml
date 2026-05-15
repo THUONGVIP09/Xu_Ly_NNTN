@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - book_ride
+  - inform
+  - confirm
+  - cancel
+
+entities:
+  - from_location
+  - to_location
+  - vehicle_type
+
+slots:
+  from_location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: from_location
+
+  to_location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: to_location
+
+  vehicle_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: vehicle_type
+
+responses:
+  utter_greet:
+    - text: "Xin chào! Tôi có thể hỗ trợ bạn đặt xe."
+
+  utter_ask_from_location:
+    - text: "Bạn muốn đi từ đâu?"
+
+  utter_ask_to_location:
+    - text: "Bạn muốn đi đến đâu?"
+
+  utter_ask_vehicle_type:
+    - text: "Bạn muốn đi loại xe gì? Xe máy, ô tô, 4 chỗ hay 7 chỗ?"
+
+  utter_confirm_order:
+    - text: "Đã đặt xe từ {from_location} đến {to_location} bằng {vehicle_type}. Bạn xác nhận chuyến đi này đúng không?"
+
+  utter_booking_success:
+    - text: "Cảm ơn bạn. Chuyến xe của bạn đã được xác nhận."
+
+  utter_cancel:
+    - text: "Yêu cầu đặt xe đã được hủy."
+
+  utter_goodbye:
+    - text: "Tạm biệt bạn!"
+
+actions: []

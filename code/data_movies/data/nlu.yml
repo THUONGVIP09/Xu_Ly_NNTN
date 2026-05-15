@@ -1,0 +1,29 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - xin chào
+    - chào bạn
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - tạm biệt
+
+- intent: recommend_movie
+  examples: |
+    - recommend movie similar to [Inception](movie_title)
+    - suggest movies like [The Matrix](movie_title)
+    - I like [Interstellar](movie_title)
+    - find movies similar to [Titanic](movie_title)
+    - recommend something like [Toy Story](movie_title)
+    - gợi ý phim giống [Inception](movie_title)
+    - tôi thích phim [The Matrix](movie_title)
+    - tìm phim giống [Interstellar](movie_title)
+    - có phim nào giống [Titanic](movie_title) không
+    - gợi ý phim tương tự [John Wick](movie_title)
+

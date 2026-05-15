@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+  - story: book ride full information
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: book_ride
+        entities:
+          - from_location: "Sơn Trà"
+          - to_location: "VKU"
+          - vehicle_type: "xe máy"
+      - slot_was_set:
+          - from_location: "Sơn Trà"
+          - to_location: "VKU"
+          - vehicle_type: "xe máy"
+      - action: utter_confirm_order
+      - intent: confirm
+      - action: utter_booking_success
+
+  - story: book ride step by step
+    steps:
+      - intent: book_ride
+      - action: utter_ask_from_location
+      - intent: inform
+        entities:
+          - from_location: "Sơn Trà"
+      - slot_was_set:
+          - from_location: "Sơn Trà"
+      - action: utter_ask_to_location
+      - intent: inform
+        entities:
+          - to_location: "VKU"
+      - slot_was_set:
+          - to_location: "VKU"
+      - action: utter_ask_vehicle_type
+      - intent: inform
+        entities:
+          - vehicle_type: "xe máy"
+      - slot_was_set:
+          - vehicle_type: "xe máy"
+      - action: utter_confirm_order
+      - intent: confirm
+      - action: utter_booking_success
+
+  - story: cancel booking
+    steps:
+      - intent: book_ride
+      - action: utter_ask_from_location
+      - intent: cancel
+      - action: utter_cancel
